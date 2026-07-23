@@ -1,0 +1,301 @@
+.hero {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 1rem;
+  background-color: var(--color-primary-soft);
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
+.heroDesc {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.noticeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.infoIcon {
+  color: var(--color-primary);
+}
+
+.doctorsSection {
+  background-color: #ffffff;
+  padding: 5rem 0;
+}
+
+.doctorsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.docCard {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.docCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(109, 60, 200, 0.1);
+  border-color: var(--color-primary-light);
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.docImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.roleBadge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.docBody {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.docName {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.docBio {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.specBox {
+  background-color: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  border: 1px solid var(--color-border);
+  margin-bottom: 1.25rem;
+}
+
+.boxLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.boxVal {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.detailsRow {
+  margin-bottom: 1.5rem;
+}
+
+.detailCol {
+  background-color: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.consultBtn {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 20px rgba(109, 60, 200, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.consultBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Inside LARA Smiles Section */
+.insideSection {
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+}
+
+.headerCenter {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.headerSub {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.masonryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 240px;
+  gap: 1.5rem;
+}
+
+.masonryItem {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  background-color: #E2E8F0;
+}
+
+.normal { grid-row: span 1; }
+.tall { grid-row: span 2; }
+.wide { grid-column: span 2; grid-row: span 1; }
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0) 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.zoomIcon {
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.itemTitle {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.masonryItem:hover .galleryImg {
+  transform: scale(1.08);
+}
+
+.masonryItem:hover .overlay {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .doctorsGrid { grid-template-columns: repeat(2, 1fr); }
+  .masonryGrid { grid-template-columns: repeat(2, 1fr); }
+  .wide { grid-column: span 1; }
+}
+
+@media (max-width: 600px) {
+  .doctorsGrid, .masonryGrid { grid-template-columns: 1fr; }
+  .tall { grid-row: span 1; }
+}

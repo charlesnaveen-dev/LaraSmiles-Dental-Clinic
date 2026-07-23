@@ -1,0 +1,187 @@
+.section {
+  background-color: #ffffff;
+}
+
+.headerFlex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 1rem;
+  background-color: var(--color-primary-soft);
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  color: var(--color-text);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  max-width: 540px;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0.6rem 1.25rem;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+}
+
+.viewAllBtn:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(109, 60, 200, 0.08);
+  border-color: var(--color-primary-light);
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.docImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .docImg {
+  transform: scale(1.06);
+}
+
+.roleBadge {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.cardBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.docName {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.specialization {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.consultBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.consultBtn:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+@media (max-width: 992px) {
+  .headerFlex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

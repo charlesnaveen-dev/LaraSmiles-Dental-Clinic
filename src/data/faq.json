@@ -1,0 +1,213 @@
+{
+  "clinic_info": {
+    "name": "LARA Smiles Dental Clinic",
+    "tagline": "Believe in Your Smile",
+    "phone": "+91 93849 59626",
+    "email": "care@larasmiles.com",
+    "whatsapp": "+91 93849 59626",
+    "whatsapp_link": "https://wa.me/919384959626?text=Hello%20Lara%20Smiles%2C%20I%20would%20like%20to%20inquire%20about%20a%20dental%20consultation.",
+    "timings": {
+      "weekdays": "Monday – Saturday: 9:00 AM – 9:00 PM",
+      "sunday": "Sunday: 10:00 AM – 2:00 PM",
+      "summary": "We are open Monday to Saturday from 9:00 AM to 9:00 PM, and on Sundays from 10:00 AM to 2:00 PM."
+    },
+    "main_address": "124, College Road, Near Odakkadu Park, Tiruppur, Tamil Nadu - 641602",
+    "google_maps_url": "https://maps.google.com/?q=LARA+Smiles+Dental+Clinic+Tiruppur"
+  },
+  "branches": [
+    {
+      "name": "Tiruppur Main Flagship",
+      "address": "124, College Road, Near Odakkadu Park, Tiruppur - 641602",
+      "phone": "+91 93849 59626",
+      "timings": "Mon - Sat: 9am - 9pm | Sun: 10am - 2pm"
+    },
+    {
+      "name": "Salem Branch",
+      "address": "45, Five Roads Junction, Fairlands, Salem - 636016",
+      "phone": "+91 93849 59626",
+      "timings": "Mon - Sat: 9am - 9pm"
+    },
+    {
+      "name": "Madurai Branch",
+      "address": "88, KK Nagar Main Road, Madurai - 625020",
+      "phone": "+91 93849 59626",
+      "timings": "Mon - Sat: 9am - 9pm"
+    },
+    {
+      "name": "Bangalore Branch",
+      "address": "204, 100 Feet Road, Indiranagar, Bangalore - 560038",
+      "phone": "+91 93849 59626",
+      "timings": "Mon - Sat: 9am - 9pm"
+    },
+    {
+      "name": "Sivakasi Branch",
+      "address": "12, Chairman Shanmugam Road, Sivakasi - 626123",
+      "phone": "+91 93849 59626",
+      "timings": "Mon - Sat: 9am - 8pm"
+    }
+  ],
+  "treatments": {
+    "invisalign": {
+      "title": "Invisalign® Clear Aligners",
+      "summary": "Invisalign® clear aligners are virtually invisible, removable trays custom-made using 3D iTero® intraoral scanning to straighten teeth comfortably without metal wires or brackets.",
+      "benefits": [
+        "Virtually 100% invisible clear aligners",
+        "Removable for effortless eating and brushing",
+        "3D digital treatment outcome preview",
+        "Fewer clinic visits than metal braces"
+      ],
+      "suitable_for": "Teens and adults with crowded teeth, gaps, overbite, or underbite looking for discreet alignment."
+    },
+    "implants": {
+      "title": "Dental Implants",
+      "summary": "Dental implants are permanent, natural-feeling titanium root replacements anchored into the jawbone, capped with handcrafted porcelain crowns for lifetime chewing strength and smile aesthetics.",
+      "benefits": [
+        "Permanent lifetime tooth replacement",
+        "Prevents jawbone loss and preserves facial structure",
+        "100% natural chewing functionality",
+        "Seamless aesthetic match with surrounding teeth"
+      ]
+    },
+    "smile_makeover": {
+      "title": "Full Smile Makeover",
+      "summary": "A comprehensive smile makeover combines digital smile design, porcelain veneers, laser whitening, and aligners to reconstruct facial and dental symmetry tailored to your unique features.",
+      "benefits": [
+        "3D facial and dental digital simulation",
+        "Holistic transformation of shape, alignment, and color",
+        "Pain-free micro-procedures with natural results"
+      ]
+    },
+    "veneers": {
+      "title": "Porcelain Veneers",
+      "summary": "Porcelain veneers are ultra-thin, handcrafted ceramic shells permanently bonded to the front surface of teeth to correct deep stains, chips, gaps, or irregular shapes.",
+      "benefits": [
+        "Hollywood-grade cosmetic perfection",
+        "Stain-resistant porcelain material",
+        "Minimally invasive enamel preservation"
+      ]
+    },
+    "whitening": {
+      "title": "Laser Teeth Whitening",
+      "summary": "Our in-office laser teeth whitening uses advanced LED-activated gel to brighten yellowed or discolored teeth up to 8 shades lighter in just 45 minutes.",
+      "benefits": [
+        "Up to 8 shades whiter in 45 minutes",
+        "Enamel-safe with anti-sensitivity formulation",
+        "Instant results before special occasions"
+      ]
+    },
+    "root_canal": {
+      "title": "Painless Root Canal Treatment",
+      "summary": "Our single-visit rotary endodontics eliminates nerve infection 100% painlessly using micro-anesthesia, preserving your natural tooth.",
+      "benefits": [
+        "100% pain-free treatment with micro-anesthesia",
+        "Completed in a single comfortable visit",
+        "Saves natural tooth structure"
+      ]
+    },
+    "kids_dentistry": {
+      "title": "Pediatric & Kids Dentistry",
+      "summary": "Gentle, stress-free dental care for children including preventive sealants, cavity fillings, space maintainers, and gentle habit management in a playful environment.",
+      "benefits": [
+        "Child-friendly compassionate dentists",
+        "Preventive fluoride & fissure sealants",
+        "Painless gentle techniques"
+      ]
+    }
+  },
+  "doctors": {
+    "summary": "LARA Smiles features a team of accredited dental specialists including Prosthodontists, Endodontists, Implantologists, and Certified Invisalign® Diamond Providers.",
+    "lead_specialist": "Dr. Lara & Team of Senior Dental Surgeons with over 12+ years of clinical excellence across 15,000+ smile transformations."
+  },
+  "faqs": [
+    {
+      "id": "pricing",
+      "keywords": ["cost", "price", "pricing", "fee", "rate", "how much", "charges", "expensive", "budget", "payment"],
+      "intent": "pricing",
+      "answer": "Treatment cost depends on individual requirements and dental evaluation. Please book a consultation for a personalized treatment plan and exact estimate."
+    },
+    {
+      "id": "pain",
+      "keywords": ["pain", "toothache", "hurt", "swelling", "bleeding", "emergency", "ache", "broken tooth", "decay"],
+      "intent": "pain_emergency",
+      "answer": "I'm sorry to hear you're experiencing pain or discomfort! We recommend booking an urgent consultation so our specialists can evaluate and treat the cause pain-free immediately."
+    },
+    {
+      "id": "timings",
+      "keywords": ["timing", "timings", "time", "hours", "opening", "open", "close", "closing", "sunday", "today", "schedule"],
+      "intent": "timings",
+      "answer": "LARA Smiles clinic timings:\n\n• Monday – Saturday: 9:00 AM – 9:00 PM\n• Sunday: 10:00 AM – 2:00 PM\n\nWalk-ins and appointments are welcome during these hours."
+    },
+    {
+      "id": "location",
+      "keywords": ["location", "address", "where", "directions", "map", "located", "branch", "branches", "tiruppur", "salem", "madurai", "bangalore", "sivakasi"],
+      "intent": "location",
+      "answer": "LARA Smiles Main Flagship Clinic is located at:\n📍 124, College Road, Near Odakkadu Park, Tiruppur, Tamil Nadu - 641602.\n\nWe also have branches in Salem, Madurai, Bangalore, and Sivakasi!"
+    },
+    {
+      "id": "invisalign",
+      "keywords": ["invisalign", "aligner", "aligners", "clear braces", "invisible braces", "clip", "clips", "straighten"],
+      "intent": "invisalign",
+      "answer": "Invisalign® clear aligners are virtually invisible, removable trays designed to straighten your teeth comfortably without metal brackets. As certified Invisalign® Diamond Providers, we offer 3D iTero® digital smile simulations!"
+    },
+    {
+      "id": "implants",
+      "keywords": ["implant", "implants", "missing tooth", "replace tooth", "tooth replacement", "titanium"],
+      "intent": "implants",
+      "answer": "Dental implants are permanent, natural-feeling titanium root replacements anchored into the jawbone. They restore 100% chewing strength and prevent jawbone loss."
+    },
+    {
+      "id": "smile_makeover",
+      "keywords": ["smile makeover", "transformation", "smile design", "full smile", "cosmetic dentistry"],
+      "intent": "smile_makeover",
+      "answer": "A Smile Makeover combines 3D digital facial planning, porcelain veneers, laser whitening, and aligners to craft your ideal, confident smile tailored to your facial symmetry."
+    },
+    {
+      "id": "whitening",
+      "keywords": ["whitening", "bleaching", "yellow", "stain", "brighten", "white teeth", "laser whitening"],
+      "intent": "whitening",
+      "answer": "Our 45-minute Laser Teeth Whitening brightens your teeth up to 8 shades lighter using LED-activated, enamel-safe, anti-sensitivity gels!"
+    },
+    {
+      "id": "root_canal",
+      "keywords": ["root canal", "rct", "rotary", "nerve", "painless root canal"],
+      "intent": "root_canal",
+      "answer": "Our Painless Root Canal Treatment utilizes single-visit rotary endodontics and gentle micro-anesthesia to save your natural tooth with 0% pain."
+    },
+    {
+      "id": "veneers",
+      "keywords": ["veneer", "veneers", "porcelain veneers", "ceramic", "chipped", "gap"],
+      "intent": "veneers",
+      "answer": "Porcelain Veneers are handcrafted ceramic shells bonded to the front of your teeth to correct discoloration, chips, gaps, or minor misalignment."
+    },
+    {
+      "id": "doctors",
+      "keywords": ["doctor", "doctors", "dentist", "dentists", "specialist", "surgeon", "qualifications", "team"],
+      "intent": "doctors",
+      "answer": "Our clinical team consists of accredited dental surgeons, endodontists, prosthodontists, implantologists, and certified Invisalign® Diamond Providers committed to compassionate, world-class care."
+    },
+    {
+      "id": "appointment",
+      "keywords": ["appointment", "book", "consultation", "booking", "schedule visit", "reserve", "slot"],
+      "intent": "appointment",
+      "answer": "Booking an appointment at LARA Smiles is easy! You can book directly through our online scheduler or connect with our reception via WhatsApp."
+    },
+    {
+      "id": "whatsapp",
+      "keywords": ["talk", "human", "reception", "receptionist", "speak", "person", "chat", "contact", "phone", "call", "whatsapp"],
+      "intent": "whatsapp",
+      "answer": "You can connect directly with our clinic reception team on WhatsApp or give us a call at +91 93849 59626."
+    },
+    {
+      "id": "insurance",
+      "keywords": ["insurance", "claim", "coverage", "reimbursement", "mediclaim", "card", "cashless"],
+      "intent": "insurance",
+      "answer": "We assist with dental insurance reimbursement documentation and offer flexible payment plans for major dental procedures. Please contact our reception for details!"
+    },
+    {
+      "id": "emergency",
+      "keywords": ["emergency", "urgent", "broken", "accident", "trauma", "night"],
+      "intent": "emergency",
+      "answer": "For urgent dental emergencies (severe pain, trauma, broken teeth), please call our hotline immediately at +91 93849 59626 for priority assistance."
+    }
+  ]
+}
