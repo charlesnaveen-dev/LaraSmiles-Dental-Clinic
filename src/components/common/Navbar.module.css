@@ -203,6 +203,8 @@
   transition: background-color 0.2s ease;
   cursor: pointer;
   flex-shrink: 0;
+  position: relative;
+  z-index: 10000;
 }
 
 .mobileToggle:hover {
