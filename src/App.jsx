@@ -61,50 +61,49 @@ export function App() {
   }, []);
 
   return (
-  
-      <Router>
-        <ScrollToTop />
+    <Router>
+      <ScrollToTop />
 
-        {/* Initial Brand Percentage Preloader */}
-        {!isPreloaderDone && (
-          <Preloader onFinish={() => setIsPreloaderDone(true)} />
-        )}
+      {/* Initial Brand Percentage Preloader */}
+      {!isPreloaderDone && (
+        <Preloader onFinish={() => setIsPreloaderDone(true)} />
+      )}
 
-        {/* Magnetic Custom Cursor */}
-        <CustomCursor />
+      {/* Magnetic Custom Cursor */}
+      <CustomCursor />
 
-        {/* Top Scroll Progress Indicator */}
-        <ScrollProgress />
+      {/* Top Scroll Progress Indicator */}
+      <ScrollProgress />
 
-        {/* Apple-Style Glass Navbar */}
-        <Navbar onOpenAppointment={() => setIsAppointmentOpen(true)} />
+      {/* Apple-Style Glass Navbar */}
+      <Navbar onOpenAppointment={() => setIsAppointmentOpen(true)} />
 
-        {/* Main Route View */}
-        <main>
-          <Suspense fallback={<div style={{ minHeight: '80vh', background: '#ffffff' }} />}>
-            <Routes>
-              <Route path="/" element={<HomePage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
-              <Route path="/about" element={<AboutPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
-              <Route path="/treatments" element={<TreatmentsPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
-              <Route path="/doctors" element={<DoctorsPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
-              <Route path="/gallery" element={<GalleryPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
-              <Route path="/contact" element={<ContactPage />} />
-            </Routes>
-          </Suspense>
-        </main>
+      {/* Main Route View */}
+      <main>
+        <Suspense fallback={<div style={{ minHeight: '80vh', background: '#ffffff' }} />}>
+          <Routes>
+            <Route path="/" element={<HomePage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
+            <Route path="/about" element={<AboutPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
+            <Route path="/treatments" element={<TreatmentsPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
+            <Route path="/doctors" element={<DoctorsPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
+            <Route path="/gallery" element={<GalleryPage onOpenAppointment={() => setIsAppointmentOpen(true)} />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </Suspense>
+      </main>
 
-        {/* Luxury Footer */}
-        <Footer onOpenAppointment={() => setIsAppointmentOpen(true)} />
+      {/* Luxury Footer */}
+      <Footer onOpenAppointment={() => setIsAppointmentOpen(true)} />
 
-        {/* Unified Floating Actions Stack (Includes Back To Top, Lara AI, WhatsApp, Call) */}
-        <FloatingActions onOpenAppointment={() => setIsAppointmentOpen(true)} />
+      {/* Unified Floating Actions Stack (Includes Back To Top, Lara AI, WhatsApp, Call) */}
+      <FloatingActions onOpenAppointment={() => setIsAppointmentOpen(true)} />
 
-        {/* WhatsApp Appointment Modal */}
-        <AppointmentModal
-          isOpen={isAppointmentOpen}
-          onClose={() => setIsAppointmentOpen(false)}
-        />
-      </Router>
+      {/* WhatsApp Appointment Modal */}
+      <AppointmentModal
+        isOpen={isAppointmentOpen}
+        onClose={() => setIsAppointmentOpen(false)}
+      />
+    </Router>
   );
 }
 
