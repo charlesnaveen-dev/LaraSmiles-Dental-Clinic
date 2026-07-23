@@ -20,10 +20,27 @@ export const Navbar = ({ onOpenAppointment }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu & dropdown on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsDropdownOpen(false);
   }, [location.pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
+  const handleMobileLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
@@ -136,27 +153,96 @@ export const Navbar = ({ onOpenAppointment }) => {
             className={styles.mobileToggle}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle Navigation Menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Navigation */}
       {isMobileMenuOpen && (
-        <div className={styles.mobileDrawer}>
-          <nav className={styles.mobileNav}>
-            <NavLink to="/" className={styles.mobileNavLink}>Home</NavLink>
-            <NavLink to="/about" className={styles.mobileNavLink}>About</NavLink>
-            <NavLink to="/treatments" className={styles.mobileNavLink}>Treatments</NavLink>
-            <NavLink to="/doctors" className={styles.mobileNavLink}>Doctors</NavLink>
-            <NavLink to="/gallery" className={styles.mobileNavLink}>Gallery</NavLink>
-            <NavLink to="/contact" className={styles.mobileNavLink}>Contact</NavLink>
-            <button onClick={onOpenAppointment} className={styles.mobileAppointmentBtn}>
-              <Calendar size={18} /> Book Appointment
-            </button>
-          </nav>
-        </div>
+        <>
+          <div
+            className={styles.mobileBackdrop}
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className={styles.mobileDrawer} role="dialog" aria-label="Mobile Navigation Menu">
+            <nav className={styles.mobileNav}>
+              <NavLink
+                to="/"
+                onClick={handleMobileLinkClick}
+                className={({ isActive }) =>
+                  `${styles.mobileNavLink} ${isActive ? styles.activeMobileLink : ''}`
+                }
+              >
+                Home
+              </NavLink>
+
+              <NavLink
+                to="/about"
+                onClick={handleMobileLinkClick}
+                className={({ isActive }) =>
+                  `${styles.mobileNavLink} ${isActive ? styles.activeMobileLink : ''}`
+                }
+              >
+                About
+              </NavLink>
+
+              <NavLink
+                to="/treatments"
+                onClick={handleMobileLinkClick}
+                className={({ isActive }) =>
+                  `${styles.mobileNavLink} ${isActive ? styles.activeMobileLink : ''}`
+                }
+              >
+                Treatments
+              </NavLink>
+
+              <NavLink
+                to="/doctors"
+                onClick={handleMobileLinkClick}
+                className={({ isActive }) =>
+                  `${styles.mobileNavLink} ${isActive ? styles.activeMobileLink : ''}`
+                }
+              >
+                Doctors
+              </NavLink>
+
+              <NavLink
+                to="/gallery"
+                onClick={handleMobileLinkClick}
+                className={({ isActive }) =>
+                  `${styles.mobileNavLink} ${isActive ? styles.activeMobileLink : ''}`
+                }
+              >
+                Gallery
+              </NavLink>
+
+              <NavLink
+                to="/contact"
+                onClick={handleMobileLinkClick}
+                className={({ isActive }) =>
+                  `${styles.mobileNavLink} ${isActive ? styles.activeMobileLink : ''}`
+                }
+              >
+                Contact
+              </NavLink>
+
+              <button
+                onClick={() => {
+                  handleMobileLinkClick();
+                  onOpenAppointment();
+                }}
+                className={styles.mobileAppointmentBtn}
+                type="button"
+              >
+                <Calendar size={18} /> Book Appointment
+              </button>
+            </nav>
+          </div>
+        </>
       )}
     </header>
   );
