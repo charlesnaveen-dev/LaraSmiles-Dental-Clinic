@@ -95,21 +95,24 @@ Please confirm my appointment.`;
           {/* Treatment Dropdown */}
           <div className={styles.fieldGroup}>
             <label htmlFor="treatment" className={styles.label}>Preferred Treatment *</label>
-            <select
-              id="treatment"
-              className={`${styles.select} ${errors.treatment ? styles.inputError : ''}`}
-              {...register('treatment', { required: 'Please select a treatment' })}
-            >
-              <option value="">Select Treatment...</option>
-              <option value="General Consultation">General Consultation</option>
-              <option value="Invisalign">Invisalign® Clear Aligners</option>
-              <option value="Dental Implant">Dental Implant</option>
-              <option value="Root Canal">Root Canal Treatment</option>
-              <option value="Whitening">Laser Teeth Whitening</option>
-              <option value="Veneers">Porcelain Veneers</option>
-              <option value="Smile Makeover">Smile Makeover</option>
-              <option value="Others">Others</option>
-            </select>
+            <div className={styles.inputWrapper}>
+              <Sparkles size={18} className={styles.icon} />
+              <select
+                id="treatment"
+                className={`${styles.select} ${errors.treatment ? styles.inputError : ''}`}
+                {...register('treatment', { required: 'Please select a treatment' })}
+              >
+                <option value="">Select Treatment...</option>
+                <option value="General Consultation">General Consultation</option>
+                <option value="Invisalign">Invisalign® Clear Aligners</option>
+                <option value="Dental Implant">Dental Implant</option>
+                <option value="Root Canal">Root Canal Treatment</option>
+                <option value="Whitening">Laser Teeth Whitening</option>
+                <option value="Veneers">Porcelain Veneers</option>
+                <option value="Smile Makeover">Smile Makeover</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
             {errors.treatment && <span className={styles.errorMsg}>{errors.treatment.message}</span>}
           </div>
 

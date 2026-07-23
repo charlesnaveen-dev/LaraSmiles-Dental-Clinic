@@ -1,5 +1,5 @@
 .hero {
-  padding: 8rem 0 4rem;
+  padding: 7rem 0 4rem;
   background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
   border-bottom: 1px solid var(--color-border);
 }
@@ -103,9 +103,32 @@
   color: var(--color-text);
 }
 
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 0.85rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.iconTop {
+  position: absolute;
+  left: 0.85rem;
+  top: 0.85rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .input, .select, .textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem 0.75rem 2.6rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg-light);
@@ -115,6 +138,7 @@
 }
 
 .select {
+  padding-left: 2.6rem;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2064748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -122,6 +146,7 @@
 }
 
 .textarea {
+  padding-left: 2.6rem;
   resize: vertical;
 }
 
@@ -286,4 +311,10 @@
 @media (max-width: 992px) {
   .grid2Col { grid-template-columns: 1fr; }
   .row2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .formCard, .sideBox {
+    padding: 1.5rem;
+  }
 }
