@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 export const SEOHead = ({ 
   title = "LARA Smiles | Premium Dental Care, Invisalign® & Dental Implants",

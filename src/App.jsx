@@ -1,6 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import Lenis from '@studio-freight/lenis';
 
 import { Navbar } from '@/components/common/Navbar';
@@ -62,7 +61,7 @@ export function App() {
   }, []);
 
   return (
-    <HelmetProvider>
+  
       <Router>
         <ScrollToTop />
 
@@ -106,7 +105,6 @@ export function App() {
           onClose={() => setIsAppointmentOpen(false)}
         />
       </Router>
-    </HelmetProvider>
   );
 }
 

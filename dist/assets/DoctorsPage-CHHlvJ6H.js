@@ -1,4 +1,4 @@
-import{c,j as e,C as d}from"./index-b4AWMi9L.js";import{b as m}from"./vendor-DNlFkk-j.js";import{S as _}from"./SEOHead-HvraYULQ.js";import{C as j,c as h,Z as x,L as p}from"./clinic-3-BnipUpG3.js";import{C as y}from"./CTASection-By074WJA.js";import{U as g,d as u,G as N,S as b,h as I,a as t,b as S}from"./doctor-2-D_uHgYn0.js";import{d as C}from"./doctor-team-C9Rq7Y2w.js";import{c as v,b as f,g as B,a as L}from"./gallery-2-1laHsR6L.js";import"./gsap-CzGW6FVa.js";/**
+import{c,j as e,C as d}from"./index-Pl1p_-yQ.js";import{b as m}from"./vendor-C0wX1Slo.js";import{S as _}from"./SEOHead-B24xq9Fe.js";import{C as j,c as h,Z as x,L as p}from"./clinic-3-DaqQYcRu.js";import{C as y}from"./CTASection-D3MgjTCe.js";import{U as g,d as u,G as N,S as b,h as I,a as t,b as S}from"./doctor-2-B1ZvXZPV.js";import{d as C}from"./doctor-team-C9Rq7Y2w.js";import{c as v,b as f,g as B,a as L}from"./gallery-2-1laHsR6L.js";import"./gsap-CzGW6FVa.js";/**
  * @license lucide-react v0.469.0 - ISC
  *
  * This source code is licensed under the ISC license.
