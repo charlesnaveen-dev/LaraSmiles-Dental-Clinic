@@ -1,77 +1,56 @@
-import React, { useEffect, useRef } from 'react';
-import { Star, Quote, CheckCircle2 } from 'lucide-react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
+import { Star, Quote, CheckCircle2, HeartHandshake } from 'lucide-react';
 import styles from './Testimonials.module.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export const Testimonials = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        `.${styles.card}`,
-        { opacity: 0, y: 35 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%'
-          }
-        }
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   const reviews = [
     {
       name: 'Kavitha Ramachandran',
-      location: 'Tiruppur Branch',
+      location: 'Tiruppur Main Clinic',
       treatment: 'Invisalign® Clear Aligners',
       rating: 5,
-      comment: 'My Invisalign treatment at LARA Smiles was smooth from day one. The 3D digital preview showed me exact results beforehand, and now my smile is flawless!'
+      comment: 'My Invisalign treatment at LARA Smiles was smooth from day one. The 3D digital preview showed me exact results beforehand, and now my smile is completely transformed and flawless!'
     },
     {
       name: 'Arun Kumar',
       location: 'Bangalore Branch',
-      treatment: 'Dental Implants',
+      treatment: 'Permanent Dental Implants',
       rating: 5,
-      comment: 'I was nervous about getting a dental implant, but Dr. and team made it completely painless. The implant looks and feels 100% like my natural tooth.'
+      comment: 'I was nervous about getting a dental implant, but Dr. and team made it completely painless. The implant looks and feels 100% like my natural tooth with full chewing comfort.'
     },
     {
       name: 'Priya Sundaram',
       location: 'Salem Branch',
       treatment: 'Porcelain Veneers & Whitening',
       rating: 5,
-      comment: 'The level of hygiene and hospitality at LARA Smiles is unmatched. My porcelain veneers transformed my confidence. Highly recommended!'
+      comment: 'The level of hygiene and clinical care at LARA Smiles is unmatched. My porcelain veneers completely restored my confidence for my wedding. Highly recommended!'
     }
   ];
 
   return (
-    <section className={`section ${styles.section}`} ref={sectionRef}>
+    <section className={`section ${styles.section}`}>
       <div className="container">
         <div className={styles.header}>
-          <span className={styles.tag}>Patient Stories</span>
+          <div className="section-tag">
+            <HeartHandshake size={14} />
+            <span>Patient Testimonials</span>
+          </div>
           <h2 className={styles.title}>Stories of Confidence Restored</h2>
+          <p className={styles.subtitle}>
+            Hear directly from our patients about their smile transformation journeys across South India.
+          </p>
         </div>
 
         <div className={styles.grid}>
           {reviews.map((rev, idx) => (
             <div key={idx} className={styles.card}>
-              <Quote size={32} className={styles.quoteIcon} />
-              
-              <div className={styles.starsRow}>
-                {[...Array(rev.rating)].map((_, i) => (
-                  <Star key={i} size={15} fill="#D4AF37" className={styles.star} />
-                ))}
+              <div className={styles.topRow}>
+                <div className={styles.starsRow}>
+                  {[...Array(rev.rating)].map((_, i) => (
+                    <Star key={i} size={15} fill="#D4AF37" stroke="#D4AF37" />
+                  ))}
+                </div>
+                <Quote size={24} className={styles.quoteIcon} />
               </div>
 
               <p className={styles.comment}>"{rev.comment}"</p>
@@ -82,7 +61,8 @@ export const Testimonials = () => {
                 </div>
                 <div>
                   <div className={styles.authorName}>
-                    {rev.name} <CheckCircle2 size={14} className={styles.verifiedIcon} />
+                    <span>{rev.name}</span>
+                    <CheckCircle2 size={15} className={styles.verifiedIcon} />
                   </div>
                   <div className={styles.authorSub}>{rev.treatment} • {rev.location}</div>
                 </div>

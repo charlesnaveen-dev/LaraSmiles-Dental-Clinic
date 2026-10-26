@@ -10,31 +10,8 @@ import styles from './Footer.module.css';
 gsap.registerPlugin(ScrollTrigger);
 
 export const Footer = ({ onOpenAppointment }) => {
-  const footerRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        footerRef.current,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: footerRef.current,
-            start: 'top 90%'
-          }
-        }
-      );
-    }, footerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <footer className={styles.footer} ref={footerRef}>
+    <footer className={styles.footer}>
       <div className={`container ${styles.footerGrid}`}>
         {/* Brand Info */}
         <div className={styles.brandCol}>

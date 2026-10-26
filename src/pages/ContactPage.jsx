@@ -43,7 +43,10 @@ Please confirm my appointment.`;
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <span className={styles.tag}><MapPin size={14} /> Get In Touch</span>
+          <div className="section-tag">
+            <MapPin size={14} />
+            <span>Get In Touch</span>
+          </div>
           <h1 className={styles.heroTitle}>Contact & Appointments</h1>
           <p className={styles.heroDesc}>
             Book your consultation via our WhatsApp appointment form or visit your nearest LARA Smiles branch across South India.
@@ -180,9 +183,9 @@ Please confirm my appointment.`;
               </form>
             </div>
 
-            {/* Quick Contact & Working Hours Side Box */}
-            <div className={styles.sideBox}>
-              <h2 className={styles.sideTitle}>Direct Clinic Contacts</h2>
+            {/* Direct Clinic Contacts Card */}
+            <div className={styles.infoCard}>
+              <h2 className={styles.infoTitle}>Direct Clinic Contacts</h2>
 
               <div className={styles.contactList}>
                 <div className={styles.contactItem}>
@@ -196,7 +199,7 @@ Please confirm my appointment.`;
                 </div>
 
                 <div className={styles.contactItem}>
-                  <div className={styles.iconBoxGreen}>
+                  <div className={styles.iconBox}>
                     <MessageCircle size={20} />
                   </div>
                   <div>
@@ -249,7 +252,10 @@ Please confirm my appointment.`;
       <section className={`section ${styles.branchSection}`}>
         <div className="container">
           <div className={styles.headerCenter}>
-            <span className={styles.tag}>South India Network</span>
+            <div className="section-tag">
+              <MapPin size={14} />
+              <span>South India Network</span>
+            </div>
             <h2 className={styles.sectionTitle}>Interactive Branch & Map Selector</h2>
             <p className={styles.sectionSub}>Select any branch tab below to view verified location details, map embed, and direct Google Maps directions.</p>
           </div>

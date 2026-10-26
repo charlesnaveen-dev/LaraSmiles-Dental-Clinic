@@ -175,7 +175,7 @@ export const AIAssistant = ({ onOpenAppointment }) => {
             </button>
 
             <div className={styles.invitationHeader}>
-              <span className={styles.invitationTooth}>🦷</span>
+              <Sparkles size={16} className={styles.invitationSparkle} />
               <span className={styles.invitationTitle}>Ask Lara AI</span>
             </div>
 
@@ -204,8 +204,7 @@ export const AIAssistant = ({ onOpenAppointment }) => {
           type="button"
         >
           <div className={styles.btnIconWrapper}>
-            <span className={styles.toothIcon}>🦷</span>
-            <Sparkles size={13} className={styles.sparkleBadge} />
+            <Sparkles size={20} className={styles.sparkleIconMain} />
           </div>
 
           <div className={styles.pillLabelGroup}>

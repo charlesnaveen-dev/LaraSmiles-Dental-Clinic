@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Clock, ExternalLink, Navigation } from 'lucide-react';
+import { MapPin, Phone, Clock, Navigation, ExternalLink } from 'lucide-react';
 import { branchesData } from '@/data/branchesData';
 import styles from './BranchSelector.module.css';
 
@@ -20,6 +20,7 @@ export const BranchSelector = () => {
               aria-selected={isActive}
               className={`${styles.tabBtn} ${isActive ? styles.activeTab : ''}`}
               onClick={() => setActiveBranchId(branch.id)}
+              type="button"
             >
               <MapPin size={16} className={styles.tabIcon} />
               <span>{branch.name.split(' ')[0]}</span>
@@ -38,7 +39,7 @@ export const BranchSelector = () => {
             {activeBranch.isMain ? (
               <span className={styles.badgeGold}>Flagship Clinic</span>
             ) : (
-              <span className={styles.badgePurple}>South India Network</span>
+              <span className={styles.badgePurple}>South India Branch</span>
             )}
           </div>
 
@@ -84,23 +85,41 @@ export const BranchSelector = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.directionsBtn}
+              aria-label={`Get directions to ${activeBranch.name} on Google Maps`}
             >
-              <Navigation size={18} />
-              Get Directions
+              <Navigation size={17} />
+              <span>Get Directions</span>
             </a>
 
             <a
               href={`tel:${activeBranch.phone.replace(/[^0-9+]/g, '')}`}
               className={styles.callBtn}
+              aria-label={`Call ${activeBranch.name}`}
             >
-              <Phone size={18} />
-              Call Now
+              <Phone size={17} />
+              <span>Call Branch</span>
             </a>
           </div>
         </div>
 
-        {/* Embedded Google Map */}
+        {/* Embedded Google Map with Fallback & Direct Link */}
         <div className={styles.mapContainer}>
+          <div className={styles.mapTopBar}>
+            <div className={styles.mapHeaderLeft}>
+              <MapPin size={15} className={styles.mapPinIcon} />
+              <span className={styles.mapHeaderTitle}>{activeBranch.name} Location</span>
+            </div>
+            <a
+              href={activeBranch.directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapOpenLink}
+            >
+              <span>Open in Maps</span>
+              <ExternalLink size={13} />
+            </a>
+          </div>
+
           <iframe
             title={`Google Map - ${activeBranch.name}`}
             src={activeBranch.mapEmbedUrl}

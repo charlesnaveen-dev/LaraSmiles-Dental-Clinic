@@ -5,7 +5,6 @@ import Lenis from '@studio-freight/lenis';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { Preloader } from '@/components/common/Preloader';
-import { CustomCursor } from '@/components/common/CustomCursor';
 import { ScrollProgress } from '@/components/common/ScrollProgress';
 import { FloatingActions } from '@/components/common/FloatingActions';
 import { AppointmentModal } from '@/components/common/AppointmentModal';
@@ -38,12 +37,14 @@ const ScrollToTop = () => {
 
 export function App() {
   const [isAppointmentOpen, setIsAppointmentOpen] = useState(false);
-  const [isPreloaderDone, setIsPreloaderDone] = useState(false);
+  const [isPreloaderDone, setIsPreloaderDone] = useState(() => {
+    return !!sessionStorage.getItem('lara_smiles_preloaded');
+  });
 
   // Initialize Lenis Smooth Scroll
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
@@ -60,17 +61,19 @@ export function App() {
     return () => lenis.destroy();
   }, []);
 
+  const handlePreloaderFinish = () => {
+    sessionStorage.setItem('lara_smiles_preloaded', 'true');
+    setIsPreloaderDone(true);
+  };
+
   return (
     <Router>
       <ScrollToTop />
 
       {/* Initial Brand Percentage Preloader */}
       {!isPreloaderDone && (
-        <Preloader onFinish={() => setIsPreloaderDone(true)} />
+        <Preloader onFinish={handlePreloaderFinish} />
       )}
-
-      {/* Magnetic Custom Cursor */}
-      <CustomCursor />
 
       {/* Top Scroll Progress Indicator */}
       <ScrollProgress />

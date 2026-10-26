@@ -155,9 +155,11 @@ export const Navbar = ({ onOpenAppointment }) => {
             onClick={onOpenAppointment}
             className={styles.appointmentBtn}
             aria-label="Book Dental Appointment"
+            type="button"
           >
             <Calendar size={16} />
-            <span>Book Appointment</span>
+            <span className={styles.btnTextLong}>Book Appointment</span>
+            <span className={styles.btnTextShort}>Book</span>
           </button>
 
           <button

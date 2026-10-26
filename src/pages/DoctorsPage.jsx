@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UserCheck, Award, Globe, GraduationCap, Calendar, Info, Shield, ZoomIn, Camera } from 'lucide-react';
+import { UserCheck, Globe, GraduationCap, Calendar, Info, Shield, ZoomIn, Camera, Sparkles } from 'lucide-react';
 import { SEOHead } from '@/components/common/SEOHead';
 import { Lightbox } from '@/components/common/Lightbox';
 import { CTASection } from '@/components/home/CTASection';
@@ -11,7 +11,7 @@ import clinic1 from '@/assets/images/LaraSmile/clinic-1.jpg';
 import clinic2 from '@/assets/images/LaraSmile/clinic-2.jpg';
 import clinic3 from '@/assets/images/LaraSmile/clinic-3.jpg';
 import gallery1 from '@/assets/images/LaraSmile/gallery-1.jpg';
-import gallery2 from '@/assets/images/LaraSmile/gallery-2.jpg';
+import veneersImg from '@/assets/images/LaraSmile/veneers-treatment.jpg';
 import heroSmile from '@/assets/images/LaraSmile/hero-smile.jpg';
 import styles from './DoctorsPage.module.css';
 
@@ -28,29 +28,32 @@ export const DoctorsPage = ({ onOpenAppointment }) => {
   };
 
   const insideLaraItems = [
-    { id: 1, src: clinic1, title: 'Luxury Reception & Patient Lounge', span: 'wide' },
-    { id: 2, src: clinic2, title: 'Private Consultation Room', span: 'normal' },
-    { id: 3, src: clinic3, title: 'State-of-the-Art Treatment Suite', span: 'tall' },
-    { id: 4, src: gallery1, title: 'Modern 3D Digital Equipment', span: 'normal' },
-    { id: 5, src: gallery2, title: 'Sterile & Hygienic Preparation Suite', span: 'normal' },
-    { id: 6, src: heroSmile, title: 'Comfortable Patient Experience', span: 'wide' }
+    { id: 1, src: clinic1, title: 'Doctor Consultation & Treatment Suite', category: 'Clinical Operatory' },
+    { id: 2, src: clinic2, title: 'Private Specialist Consultation Room', category: 'Consultation' },
+    { id: 3, src: clinic3, title: 'Advanced Ergonomic Dental Treatment Chair', category: 'Treatment Room' },
+    { id: 4, src: gallery1, title: '3D iTero® Digital Scanner Workstation', category: 'Technology' },
+    { id: 5, src: veneersImg, title: 'Cosmetic Aesthetic Smile Transformation', category: 'Cosmetics' },
+    { id: 6, src: heroSmile, title: 'Comfortable Patient Experience Lounge', category: 'Patient Care' }
   ];
 
   return (
     <>
       <SEOHead 
         title="Our Doctors & Inside LARA Smiles | LARA Smiles"
-        description="Meet accredited dental surgeons and explore Inside LARA Smiles - modern reception, private consultation rooms, treatment suites, and digital equipment."
+        description="Meet accredited dental surgeons and orthodontists at LARA Smiles. Explore our modern clinic facilities, consultation rooms, and 3D digital technology."
         path="/doctors"
       />
 
       {/* Doctors Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <span className={styles.tag}><UserCheck size={14} /> Clinical Leadership</span>
+          <div className="section-tag">
+            <UserCheck size={14} />
+            <span>Clinical Leadership</span>
+          </div>
           <h1 className={styles.heroTitle}>Master Surgeons & Orthodontists</h1>
           <p className={styles.heroDesc}>
-            Our team brings combined decades of clinical mastery in Invisalign®, dental implants, rotary endodontics, and facial aesthetics across South India.
+            Our multi-disciplinary team brings combined decades of clinical excellence in Invisalign®, dental implants, rotary endodontics, and facial aesthetics across South India.
           </p>
 
           <div className={styles.noticeBadge}>
@@ -64,11 +67,17 @@ export const DoctorsPage = ({ onOpenAppointment }) => {
       <section className={`section ${styles.doctorsSection}`}>
         <div className="container">
           <div className={styles.doctorsGrid}>
-            {/* Replace with verified doctor data */}
             {doctorsData.map((doc) => (
               <div key={doc.id} className={styles.docCard}>
                 <div className={styles.imgWrapper}>
-                  <img src={getDoctorImage(doc.image)} alt={doc.name} className={styles.docImg} />
+                  <img
+                    src={getDoctorImage(doc.image)}
+                    alt={doc.name}
+                    className={styles.docImg}
+                    width="380"
+                    height="320"
+                    loading="lazy"
+                  />
                   <span className={styles.roleBadge}>{doc.role}</span>
                 </div>
 
@@ -95,13 +104,19 @@ export const DoctorsPage = ({ onOpenAppointment }) => {
 
                   <div className={styles.detailsRow}>
                     <div className={styles.detailCol}>
-                      <span className={styles.boxLabel}><Globe size={12} /> Languages</span>
+                      <span className={styles.boxLabel}><Globe size={13} /> Languages</span>
                       <p className={styles.boxVal}>{doc.languages}</p>
                     </div>
                   </div>
 
-                  <button onClick={onOpenAppointment} className={styles.consultBtn}>
-                    <Calendar size={16} /> Consult Specialist
+                  <button
+                    onClick={onOpenAppointment}
+                    className={styles.consultBtn}
+                    type="button"
+                    aria-label={`Consult ${doc.name}`}
+                  >
+                    <Calendar size={16} />
+                    <span>Book Consultation</span>
                   </button>
                 </div>
               </div>
@@ -114,25 +129,46 @@ export const DoctorsPage = ({ onOpenAppointment }) => {
       <section className={`section ${styles.insideSection}`}>
         <div className="container">
           <div className={styles.headerCenter}>
-            <span className={styles.tag}><Camera size={14} /> Clinic Tour</span>
+            <div className="section-tag">
+              <Camera size={14} />
+              <span>Clinic Tour</span>
+            </div>
             <h2 className={styles.sectionTitle}>Inside LARA Smiles</h2>
             <p className={styles.headerSub}>
-              Take a visual tour of our modern reception, consultation rooms, treatment suites, advanced equipment, and comfortable patient environment.
+              Take a visual tour of our modern reception, consultation suites, ergonomic operatory, and advanced digital imaging suites.
             </p>
           </div>
 
-          {/* Premium Masonry Gallery */}
-          <div className={styles.masonryGrid}>
+          {/* Clean 3x2 Grid */}
+          <div className={styles.tourGrid}>
             {insideLaraItems.map((item) => (
               <div
                 key={item.id}
-                className={`${styles.masonryItem} ${styles[item.span]}`}
+                className={styles.tourCard}
                 onClick={() => setActiveGalleryItem(item)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === 'Enter') setActiveGalleryItem(item); }}
+                aria-label={`View photo of ${item.title}`}
               >
-                <img src={item.src} alt={item.title} className={styles.galleryImg} loading="lazy" />
-                <div className={styles.overlay}>
-                  <ZoomIn size={24} className={styles.zoomIcon} />
-                  <span className={styles.itemTitle}>{item.title}</span>
+                <div className={styles.tourImgContainer}>
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className={styles.tourImg}
+                    width="400"
+                    height="280"
+                    loading="lazy"
+                  />
+                  <div className={styles.tourOverlay}>
+                    <div className={styles.zoomCircle}>
+                      <ZoomIn size={20} className={styles.zoomIcon} />
+                    </div>
+                    <span className={styles.overlayCategory}>{item.category}</span>
+                  </div>
+                </div>
+                <div className={styles.tourMeta}>
+                  <h3 className={styles.tourTitle}>{item.title}</h3>
                 </div>
               </div>
             ))}
